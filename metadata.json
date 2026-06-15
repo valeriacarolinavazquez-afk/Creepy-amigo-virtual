@@ -1,0 +1,6 @@
+{
+  "name": "Mascota Virtual Clippy",
+  "description": "Juego interactivo 2D de mascota virtual con Clippy, que combina mecánicas de Pou y Talking Tom con voz divertida, minijuegos y estados dinámicos.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

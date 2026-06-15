@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@theme {
+  --font-sans: "Fredoka", "Tahoma", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Pou Style Cartoon Border & Button */
+.pou-border {
+  border: 3.5px solid #000000;
+}
+.pou-shadow {
+  box-shadow: 0px 4px 0px 0px rgba(0,0,0,0.15);
+}
+.pou-btn {
+  border: 3.5px solid #000000;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 0px 0px #000000;
+  font-weight: 700;
+  transition: transform 0.08s, box-shadow 0.08s;
+  cursor: pointer;
+}
+.pou-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0px 1px 0px 0px #000000;
+}
+.pou-bubble-title {
+  color: #ffffff;
+  -webkit-text-stroke: 2.5px #000000;
+  paint-order: stroke fill;
+  font-weight: bold;
+}
+.pou-bubble-title-dark {
+  color: #000000;
+  -webkit-text-stroke: 1.5px #ffffff;
+  paint-order: stroke fill;
+  font-weight: bold;
+}
+.pou-item-card {
+  border: 3px solid #000000;
+  border-radius: 18px;
+  background-color: #ffffff;
+}
+
+/* Custom Windows XP Luna CSS Variables & Styling Helpers */
+:root {
+  --xp-blue: #245dd7;
+  --xp-blue-dark: #002e9c;
+  --xp-blue-light: #5b87e2;
+  --xp-silver: #ece9d8;
+  --xp-silver-border: #d4d0c8;
+  --xp-green: #3c811f;
+  --xp-orange: #f47a20;
+}
+
+/* Scrollbars Windows XP Retro Style */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-track {
+  background: #f1efe2;
+  box-shadow: inset 1px 1px 0 #fff;
+  background-image: radial-gradient(circle, #dfdbc9 25%, transparent 25%), radial-gradient(circle, #dfdbc9 25%, transparent 25%);
+  background-size: 4px 4px;
+  background-position: 0 0, 2px 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ece9d8;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1.5px solid #808080;
+  border-bottom: 1.5px solid #808080;
+  box-shadow: inset 1px 1px 0 #fff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #dbd8c9;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-top: 1.5px solid #808080;
+  border-left: 1.5px solid #808080;
+}
+
+/* Bliss Wallpaper Scenic background */
+.xp-bg-bliss {
+  background: linear-gradient(to bottom, #5086e8 0%, #a4cff4 40%, #cee6fb 60%, #fffbf2 70%, #9cbcf0 85%, #7ca4eb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.xp-bliss-meadow-base {
+  position: absolute;
+  bottom: -5%;
+  left: -10%;
+  right: -10%;
+  height: 45%;
+  background: radial-gradient(ellipse at 50% 0%, #7dc043 0%, #3e8d19 75%);
+  border-top-left-radius: 60% 40%;
+  border-top-right-radius: 50% 30%;
+  box-shadow: inset 0 20px 40px rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+}
+
+.xp-bliss-meadow-sub {
+  position: absolute;
+  bottom: -2%;
+  left: -20%;
+  right: -5%;
+  height: 38%;
+  background: radial-gradient(ellipse at 40% 0%, #5cb032 0%, #206d10 90%);
+  border-top-left-radius: 40% 20%;
+  border-top-right-radius: 60% 35%;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Puffy Bliss Cloud Vector animations */
+.xp-bliss-cloud-1 {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  width: 140px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 100px;
+  filter: blur(14px);
+  pointer-events: none;
+  animation: bg-drift 120s linear infinite;
+}
+
+.xp-bliss-cloud-2 {
+  position: absolute;
+  top: 25%;
+  right: 18%;
+  width: 220px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 100px;
+  filter: blur(12px);
+  pointer-events: none;
+  animation: bg-drift 180s linear infinite reverse;
+}
+
+@keyframes bg-drift {
+  0% { transform: translateX(-100px); }
+  50% { transform: translateX(100px); }
+  100% { transform: translateX(-100px); }
+}
+
+/* Classic Windows XP Window Box - Luna Blue */
+.xp-window {
+  background: #ece9d8;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 4px solid #0054e3;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 0 #fff;
+}
+
+/* Inactive window look */
+.xp-window-header {
+  background: linear-gradient(to right, #0058e6 0%, #0c80ef 4%, #2780f1 8%, #0452e2 95%, #0046d5 100%);
+  color: #ffffff;
+  font-family: "Trebuchet MS", "Tahoma", sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px #5c9eff, inset 0 -1px 0 #002e9c;
+}
+
+/* 3D Window/Item borders - Inset and Outset */
+.xp-border-outset {
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  background-color: #ece9d8;
+}
+
+.xp-border-inset {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background-color: #ffffff;
+}
+
+/* Retro XP Buttons (Orange hover border, Blue default gradient) */
+.xp-btn {
+  font-family: "Tahoma", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  background: linear-gradient(to bottom, #ffffff 0%, #f4f3ee 45%, #e1dfd3 50%, #e2e0d3 100%);
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px #ffffff, 0 1px 2px rgba(0,0,0,0.1);
+  padding: 4px 14px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.xp-btn:hover {
+  background: linear-gradient(to bottom, #fff6dd 0%, #ffebbe 45%, #ffd47a 50%, #ffe099 100%);
+  border: 1px solid #144b80;
+  box-shadow: inset 1px 1px 1px #ffffff;
+}
+
+.xp-btn:active {
+  background: linear-gradient(to bottom, #cdcbc3 0%, #d5d3ca 100%);
+  border: 1.5px solid #003c74;
+  box-shadow: inset 2px 2px 3px rgba(0,0,0,0.15);
+}
+
+.xp-btn-blue {
+  background: linear-gradient(to bottom, #7da5ed 0%, #4679db 45%, #245dd7 50%, #3a75ea 100%);
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #002e9c;
+  border: 1px solid #002e9c;
+}
+
+.xp-btn-blue:hover {
+  background: linear-gradient(to bottom, #a4c4f9 0%, #6195fb 45%, #447cf0 50%, #5e93fa 100%);
+  border: 1px solid #002e9c;
+}
+
+/* Red Close action button mimicking Windows XP exact title control button */
+.xp-close-btn {
+  background: linear-gradient(to bottom, #f37d6a 0%, #e1432a 45%, #d12207 50%, #b31000 100%);
+  border: 1px solid #700;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 1px rgba(255,255,255,0.4), 1px 1px 1px rgba(0,0,0,0.2);
+  width: 21px;
+  height: 21px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: 21px;
+  text-align: center;
+  transition: filter 0.1s;
+}
+
+.xp-close-btn:hover {
+  filter: brightness(1.2);
+}
+
+.xp-close-btn:active {
+  filter: brightness(0.8);
+}
+
+/* System Dialog/Tooltip bubble for Clippy */
+.xp-balloon {
+  background-color: #ffffe1;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  color: #000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.xp-balloon-arrow {
+  border-color: transparent transparent #ffffe1 transparent;
+}
+
+/* Progress Segmented styling */
+.xp-progress-groove {
+  background-color: #ffffff;
+  border-top: 1.5px solid #808080;
+  border-left: 1.5px solid #808080;
+  border-right: 1.5px solid #ffffff;
+  border-bottom: 1.5px solid #ffffff;
+}
+
+.xp-progress-block {
+  background: linear-gradient(to bottom, #d2f5b0 0%, #3fc11f 25%, #239c08 50%, #157900 85%, #d6fbb0 100%);
+  border-left: 1px solid #fff;
+  border-right: 1.5px solid #105900;
+  box-shadow: inset 0px 1px 1px #fff;
+}
